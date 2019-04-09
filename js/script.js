@@ -8,4 +8,8 @@ $(document).ready(function () {
             smartSpeed: 1000
         }
     );
+
+    $(".search-btn").click(function () {
+
+    })
 });
