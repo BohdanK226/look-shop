@@ -1,2 +1,4 @@
-.idea
-/scss/.sass-cache/
+/app/.idea
+/app/.vscode
+/app/scss/.sass-cache/
+node_modules
