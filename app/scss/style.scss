@@ -21,6 +21,7 @@ body {
 .main-header {
   background-color: #000;
   color: #fff;
+
   .sub-header {
     display: flex;
     justify-content: space-between;
@@ -32,6 +33,7 @@ body {
     @include max-screen(420px) {
       font-size: 1.5em;
     }
+
     .custom-care {
       font-size: 1.2em;
       text-transform: uppercase;
@@ -43,6 +45,7 @@ body {
         padding: 40px 10px;
       }
     }
+
     .right-wrapper {
       display: flex;
       align-items: baseline;
@@ -52,6 +55,7 @@ body {
         text-align: center;
         padding: 25px 10px;
       }
+
       .ui-selectmenu-button.ui-button {
         text-align: center;
         white-space: nowrap;
@@ -65,20 +69,25 @@ body {
         border-left: 1px solid #444444;
         border-right: 1px solid #444444;
       }
+
       .ui-selectmenu-text {
         margin: 0;
       }
+
       .ui-selectmenu-open {
         text-align: center;
       }
+
       .user-account {
         font-size: 1.2em;
         font-family: inherit;
+
         i {
           color: #666666;
           font-size: 1.4em;
           margin-right: 10px;
         }
+
         background: none;
         border: none;
         color: inherit;
@@ -86,8 +95,10 @@ body {
         padding: 10px 5px;
         cursor: pointer;
       }
+
       .search-form {
         position: relative;
+
         input[type="text"] {
           @include max-screen(640px) {
             height: 1.8em;
@@ -107,6 +118,7 @@ body {
           transition: all ease-in-out 0.5s;
           border: 1px solid #444444;
         }
+
         .btn-search {
           background: none;
           color: white;
@@ -117,9 +129,11 @@ body {
           border-left: 1px solid #444444;
           border-right: 1px solid #444444;
         }
+
         &:hover input[type="text"] {
           top: 0;
         }
+
         input[type="text"]:focus {
           top: 0;
         }
@@ -127,14 +141,17 @@ body {
     }
   }
 }
+
 .ui-selectmenu-text {
   margin: 0;
+
   &:after {
     content: "\f107";
     font-family: "Font Awesome 5 Pro";
     margin-left: 10px;
   }
 }
+
 .ui-selectmenu-open {
   text-align: center;
   background-color: #fafafa;
@@ -146,6 +163,7 @@ body {
   cursor: pointer;
   padding: 5px 0;
   border-bottom: 1px solid #d3d3d3;
+
   &:last-child {
     border: none;
   }
@@ -161,7 +179,7 @@ body {
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  
+
   .logo {
     margin-right: auto;
 
@@ -173,9 +191,9 @@ body {
   .main-menu {
     display: flex;
     font-size: 1.6em;
-    visibility: hidden;
-    opacity: 0;
-    max-height: 0;
+    visibility: visible;
+    opacity: 1;
+    max-height: none;
     overflow: hidden;
     transition: all .5s;
     @include max-screen(860px) {
@@ -206,11 +224,13 @@ body {
         color: #000;
         text-decoration: none;
         display: block;
+
         &:after {
           content: "\f107";
           font-family: "Font Awesome 5 Pro";
           margin-left: 5px;
         }
+
         &:hover {
           background-color: #e7e7e7;
         }
@@ -231,6 +251,7 @@ body {
           margin: 20px 0;
         }
       }
+
       .sub-menu {
         visibility: hidden;
         opacity: 0;
@@ -248,7 +269,7 @@ body {
 
         transition: all 0.5s ease-in-out;
         position: absolute;
-
+        z-index: 2;
         background-color: #ffbfa9;
         border-radius: 5px;
         top: 100%;
@@ -259,6 +280,7 @@ body {
         padding: 25px;
         box-sizing: border-box;
         flex-wrap: wrap;
+
         .sub-menu-item {
           width: 25%;
           margin-bottom: 30px;
@@ -270,18 +292,22 @@ body {
             width: 100%;
             font-size: 4em;
           }
+
           > a {
             color: black;
             text-decoration: none;
           }
+
           .item-menu {
             margin-top: 15px;
             font-size: 0.5em;
+
             a {
               display: block;
               padding: 5px;
               color: #000;
               text-decoration: none;
+
               &:hover {
                 text-decoration: underline;
                 color: rgb(66, 66, 66);
@@ -292,11 +318,13 @@ body {
       }
     }
   }
+
   .main-menu.active {
     visibility: visible;
-          opacity: 1;
-          max-height: 10000px;
+    opacity: 1;
+    max-height: 10000px;
   }
+
   .mobile-menu {
     display: none;
     @include max-screen(768px) {
@@ -313,11 +341,13 @@ body {
     text-transform: uppercase;
     color: white;
     margin-top: 20px;
+
     i {
       cursor: pointer;
       font-size: 25px;
     }
   }
+
   .cart {
     @include max-screen(768px) {
       margin: auto;
@@ -329,6 +359,7 @@ body {
     font-size: 1.2em;
     min-width: 215px;
     font-family: $main-font;
+
     .cart-list {
       @include max-screen(768px) {
         display: none;
@@ -337,6 +368,7 @@ body {
       border-bottom: none;
       padding: 10px;
       position: relative;
+
       ul {
         visibility: hidden;
         opacity: 0;
@@ -348,12 +380,15 @@ body {
         width: 100%;
         top: 100%;
         left: -1px;
+
         li {
           border-bottom: 1px solid #949393;
+
           &:last-child {
             border: none;
           }
         }
+
         a {
           font-family: $main-font;
           color: #949393;
@@ -361,11 +396,13 @@ body {
           text-decoration: none;
           display: block;
           padding: 10px 10px 10px 30px;
+
           &:hover {
             background-color: rgb(255, 200, 200);
           }
         }
       }
+
       &:after {
         content: "\f107";
         font-family: "Font Awesome 5 Pro";
@@ -373,28 +410,57 @@ body {
         right: 10px;
         top: 10px;
       }
+
       &:hover ul {
         visibility: visible;
         opacity: 1;
       }
     }
+
     .cart-items {
       padding: 10px;
       display: flex;
       justify-content: space-between;
       border: 1px solid #949393;
+
       a {
         color: inherit;
       }
     }
   }
+
   @include max-screen(768px) {
     flex-direction: column;
     .logo {
       margin: auto auto 30px auto;
+
       img {
         height: 65px;
       }
+    }
+  }
+}
+
+.main-slider {
+  .container {
+    background-color: #f6f3ec;
+  }
+  .owl-carousel .owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+
+    .owl-dot span {
+      display: block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #867a76;
+      margin: 0 10px;
+    }
+    .owl-dot.active span {
+      background-color: #fd926d;
     }
   }
 }

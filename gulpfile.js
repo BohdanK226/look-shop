@@ -30,7 +30,7 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
-        'app/js/jquery-2.2.1.js', // Берем jQuery
+        'app/js/jquery-3.4.0.min.js', // Берем jQuery
         'app/js/owl.carousel.min.js',
 		 'app/js/script.js'
         ])
