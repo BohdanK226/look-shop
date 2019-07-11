@@ -47,6 +47,6 @@ $(document).ready(function () {
         nav: true,
         dots:true,
         items:1,
-        navContainer: "nav-figure"
+        navText: false
     })
 });
