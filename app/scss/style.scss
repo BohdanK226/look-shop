@@ -12,6 +12,7 @@
 }
 
 $main-font: helvetica, arial, sans-serif;
+$orange: #fd926d;
 
 body {
   font-family: $main-font;
@@ -23,7 +24,7 @@ body {
   display: inline-block;
   margin: auto;
   border-bottom: solid 3px #dd6b44;
-  background-color: #fd926d;
+  background-color: $orange;
   color: #ffffff;
   font-family: "HelveticaNeueLTStdTh", sans-serif;
   font-size: 16px;
@@ -175,9 +176,9 @@ body {
   text-align: center;
   background-color: #fafafa;
   margin: 4px;
-  top: 33px!important;
+  top: 33px !important;
   @include max-screen(767px) {
-    top: 200px!important;
+    top: 200px !important;
   }
   box-shadow: #000 0 6px 14px 0;
 }
@@ -228,6 +229,11 @@ body {
       order: 2;
       width: 100%;
       display: block;
+      visibility: hidden;
+      max-height: 1px;
+      opacity: 0;
+      overflow: hidden;
+      transition: 1s ease;
     }
 
     .main-menu-item {
@@ -467,11 +473,12 @@ body {
 
 .main-slider {
   @include max-screen(992px) {
-   font-size: 7px;
+    font-size: 7px;
   }
   @include max-screen(767px) {
     display: none;
   }
+
   .owl-carousel {
     .item {
       background-color: #f3eee6;
@@ -483,6 +490,7 @@ body {
       align-items: center;
       overflow: hidden;
       position: relative;
+
       &:after {
         content: '';
         display: block;
@@ -491,8 +499,9 @@ body {
         left: 0;
         width: 100%;
         height: 7px;
-        background-image: linear-gradient(to right, rgba(0,0,0,.2) 0%, rgba(0,0,0,.2) 25%, rgba(0,0,0,.05) 50%, rgba(0,0,0,0) 100%);
+        background-image: linear-gradient(to right, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, .2) 25%, rgba(0, 0, 0, .05) 50%, rgba(0, 0, 0, 0) 100%);
       }
+
       .slider-text {
         max-width: 340px;
         margin-left: auto;
@@ -601,29 +610,127 @@ body {
     justify-content: center;
     align-items: center;
     z-index: 5;
+
     i {
       color: #cbcbca;
       font-size: 2em;
     }
 
   }
+
   .owl-carousel .owl-nav .owl-prev {
     left: 0;
   }
+
   .owl-carousel .owl-nav .owl-next {
     right: 0;
   }
-  .owl-carousel .owl-nav .owl-prev:before{
+
+  .owl-carousel .owl-nav .owl-prev:before {
     // fa-chevron-left
     content: "\f053";
     color: #cbcbca;
     font-size: 2em;
   }
-  .owl-carousel .owl-nav .owl-next:after{
+
+  .owl-carousel .owl-nav .owl-next:after {
     //fa-chevron-right
     content: "\f054";
     color: #cbcbca;
     font-size: 2em;
   }
+}
 
+.subscribe {
+  background-color: #ededed;
+  color: #6b6b6b;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  letter-spacing: -0.06px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    @include max-screen(768px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 15px;
+    }
+    form {
+      justify-content: flex-start;
+      align-items: center;
+      display: flex;
+      @include max-screen(768px) {
+        width: 100%;
+        margin-bottom: 25px;
+      }
+      label {
+        margin-right: 10px;
+        @include max-screen(768px) {
+          display: none;
+        }
+      }
+
+      input {
+        font-style: italic;
+        padding: 10px;
+        border: none;
+        @include max-screen(768px) {
+          font-size: 2em;
+          padding: 17px 8px;
+          width: 100px;
+          flex: 1 1;
+        }
+      }
+
+      button.btn-orange {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 35px;
+        min-width: 36px;
+        font-size: 2em;
+        font-weight: bold;
+        cursor: pointer;
+        @include max-screen(768px) {
+          height: 60px;
+          min-width: 60px;
+          font-size: 3em;
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-right: 15px;
+        @include max-screen(768px) {
+          font-size: 1.6em;
+        }
+      }
+
+      ul {
+        display: flex;
+
+        li {
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 55px;
+            width: 55px;
+            color: #6b6b6b;
+            font-size: 1.7em;
+          }
+        }
+        li:nth-child(odd){
+          background-color: #f7f7f7;
+        }
+      }
+    }
+  }
 }
