@@ -48,5 +48,49 @@ $(document).ready(function () {
         dots:true,
         items:1,
         navText: false
-    })
+    });
+
+    $('.carousel .owl-carousel').owlCarousel({
+        stagePadding: 90,
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots:false,
+        items:4,
+        navText: false,
+        responsive: {
+            767: {
+                items: 3,
+                stagePadding: false
+            },
+            820: {
+                items: 3,
+                stagePadding: 30
+            },
+            920: {
+                items: 3,
+                stagePadding: 70
+            },
+            1024: {
+                items: 4,
+                stagePadding: 10
+            },
+            1200: {
+                items: 4,
+                stagePadding: 90
+            },
+            1400: {
+                items: 5,
+                stagePadding: 90
+            },
+            1600: {
+                items: 6,
+                stagePadding: 90
+            }
+        }
+    });
+
+    $( function() {
+        $( "#tabs" ).tabs();
+    } );
 });
