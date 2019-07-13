@@ -1296,6 +1296,7 @@ footer {
     font-size: 2.4em;
     line-height: 1.5em;
   }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -1304,10 +1305,12 @@ footer {
       flex-direction: column;
       justify-content: center;
     }
+
     ul {
       @include max-screen(767px) {
         margin-bottom: 20px;
       }
+
       li {
         display: inline-block;
 
@@ -1328,6 +1331,7 @@ footer {
             color: white;
           }
         }
+
         @include max-screen(767px) {
           display: block;
           margin-bottom: 7px;
@@ -1338,4 +1342,37 @@ footer {
       }
     }
   }
+}
+
+.breadcrumbs {
+  padding: 10px 0;
+  margin-bottom: 24px;
+  border-bottom: 1.5px #ebebeb solid;
+  border-top: 1.5px #ebebeb solid;
+
+  ul {
+    li {
+      display: inline-block;
+      color: #7a706d;
+
+      &:before {
+        content: '>';
+        margin: 0 6px;
+      }
+      &:first-child:before {
+        content: none;
+      }
+      a {
+        font-size: 1.1em;
+        color: inherit;
+        transition: .4s;
+
+        &:hover {
+          color: #000000;
+          text-shadow: #7a706d 0 0 1px;
+        }
+      }
+    }
+  }
+
 }

@@ -1,18 +1,517 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="css/css-reset.css"/>
+    <link rel="stylesheet" href="css/fonts.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Look Shoop</title>
     <script src="js/jquery-3.4.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
-
+<header class="main-header">
+    <div class="container">
+        <div class="sub-header">
+            <span class="custom-care">custom care: 888-23-4567</span>
+            <div class="right-wrapper">
+                <div class="lang-select">
+                    <select id="selectmenu">
+                        <option>CZ</option>
+                        <option>RU</option>
+                        <option selected="selected">US</option>
+                        <option>UA</option>
+                        <option>FR</option>
+                    </select>
+                </div>
+                <button class="user-account">
+                    <i class="fas fa-user"></i>My account
+                </button>
+                <form action="" method="POST" name="search" class="search-form">
+                    <input
+                            type="text"
+                            name="search-field"
+                            placeholder="Type here and press button"
+                    />
+                    <button class="btn-search" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <section class="nav-logo-cart">
+        <a href="index.html" class="logo">
+            <img src="img/logo.png" alt="logo"/>
+        </a>
+        <div class="mobile-menu">Menu <i class="fas fa-bars"></i></div>
+        <ul class="main-menu">
+            <li class="main-menu-item">
+                <a href="#">new</a>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="#">Clothes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shoes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shirts</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Accesoires</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Clothes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shirts</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                <a href="#">designers</a>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="#">Designers</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shoes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Nike</a></li>
+                            <li><a href="#">Adidas</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shirts</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Clothes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shirts</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                <a href="#">women</a>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="#">Women </a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Women</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Women</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Accesoires</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Clothes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                <a href="#">men</a>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="#">Shoes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Men Shirts</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Accesoires</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Clothes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Men Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">men</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="main-menu-item">
+                <a href="#">clearence</a>
+                <ul class="sub-menu">
+                    <li class="sub-menu-item">
+                        <a href="#">Clothes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shoes</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Shirts</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Winter</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                    <li class="sub-menu-item">
+                        <a href="#">Accesoires</a>
+                        <ul class="item-menu">
+                            <li><a href="#">Hoodies & Sweatshirts</a></li>
+                            <li><a href="#">Jackets</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Sweaters</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <div class="cart">
+            <div class="cart-list">
+                Your cart
+                <ul>
+                    <li><a href="#">item1</a></li>
+                    <li><a href="#">item2</a></li>
+                    <li><a href="#">item3</a></li>
+                    <li><a href="#">item4</a></li>
+                    <li><a href="#">item5</a></li>
+                </ul>
+            </div>
+            <div class="cart-items">
+                <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                <span>0 items | $ 0</span>
+            </div>
+        </div>
+    </section>
+</div>
+<div class="breadcrumbs">
+    <div class="container">
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i></a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Blouses & Shirts</a></li>
+            <li><a href="#">B.young</a></li>
+            <li><a href="#">Sofi blouse</a></li>
+        </ul>
+    </div>
+</div>
+<footer>
+    <div class="cards">
+        <div class="container">
+            We accept <img src="img/cards.png" alt="Cards logos">
+        </div>
+    </div>
+    <section class="information">
+        <div class="container">
+            <ul class="links-container">
+                <li>Customer Services</li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Terms of payament</a></li>
+                <li><a href="#">Terms of safe</a></li>
+                <li><a href="#">Delivery terms and conditions</a></li>
+                <li><a href="#">Returns and Refunds</a></li>
+            </ul>
+            <ul class="links-container">
+                <li>Information</li>
+                <li><a href="#">Affiliate</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">How to shop?</a></li>
+                <li><a href="#">About Nelly</a></li>
+                <li><a href="#">Investor relations</a></li>
+            </ul>
+            <ul class="links-container">
+                <li>Campaigns</li>
+                <li><a href="#">Evening dress</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Fashion forward</a></li>
+                <li><a href="#">Training clothes</a></li>
+                <li><a href="#">Specials Ocassion Dresses</a></li>
+            </ul>
+            <ul class="links-container">
+                <li>Stores</li>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">New York</a></li>
+                <li><a href="#">London</a></li>
+                <li><a href="#">Madrid</a></li>
+                <li><a href="#">Tokio</a></li>
+            </ul>
+            <ul class="social-icons">
+                <li>Social</li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+                <li><a href="#"><i class="fab fa-tumblr"></i></a></li>
+                <li><a href="#"><i class="fab fa-vimeo-v"></i></a></li>
+            </ul>
+            <img class="secured-logo" src="img/secured.png" alt="100% secured">
+        </div>
+    </section>
+    <section class="footer-links">
+        <div class="container">
+            <ul>
+                <li><a href="#">Privacy & cookies</a></li>
+                <li><a href="#">Terms & conditions</a></li>
+                <li><a href="#">Accesability</a></li>
+                <li><a href="#">Store Directory</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <div class="copyright">
+                © LookShop.com <br>
+                All Rights Reserved
+            </div>
+        </div>
+    </section>
+</footer>
 </body>
 </html>
