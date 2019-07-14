@@ -1,5 +1,7 @@
 $(document).ready(function () {
-    $("#selectmenu").selectmenu();
+
+    // $("#selectmenu").selectmenu();
+    $("#size").selectmenu();
 
     var mql = window.matchMedia('all and (max-width: 768px)');
     var menu_btn = $('.main-menu-item > a');
@@ -9,11 +11,65 @@ $(document).ready(function () {
             if ($(this).hasClass('active')) {
                 $(this).next('ul').addClass('active');
             }
-            ;
         });
-
-
     }
+
+    // custom counter (input type = number)
+    function catalogItemCounter(field) {
+        var fieldCount = function (el) {
+            var
+                // Мин. значение
+                min = el.data('min') || false,
+
+                // Макс. значение
+                max = el.data('max') || false,
+
+                // Кнопка уменьшения кол-ва
+                dec = el.prev('.dec'),
+
+                // Кнопка увеличения кол-ва
+                inc = el.next('.inc');
+
+            function init(el) {
+                if (!el.attr('disabled')) {
+                    dec.on('click', decrement);
+                    inc.on('click', increment);
+                }
+
+                // Уменьшим значение
+                function decrement() {
+                    var value = parseInt(el[0].value);
+                    value--;
+
+                    if (!min || value >= min) {
+                        el[0].value = value;
+                    }
+                }
+
+                // Увеличим значение
+                function increment() {
+                    var value = parseInt(el[0].value);
+
+                    value++;
+
+                    if (!max || value <= max) {
+                        el[0].value = value++;
+                    }
+                }
+
+            }
+
+            el.each(function () {
+                init($(this));
+            });
+        };
+
+        $(field).each(function () {
+            fieldCount($(this));
+        });
+    }
+
+    catalogItemCounter('.fieldCount');
 
     menu_btn.click(function (e) {
         /* Act on the event */
@@ -25,6 +81,16 @@ $(document).ready(function () {
         }
         ;
         e.preventDefault();
+    });
+    var color_pic = $('.size-color .color label');
+
+    $(color_pic).click(function () {
+        if (!$(this).hasClass('active')){
+            $(color_pic).each(function () {
+                $(this).removeClass('active');
+            });
+            $(this).addClass('active');
+        }
     });
 
     $(".mobile-menu i").click(function () {
@@ -45,8 +111,8 @@ $(document).ready(function () {
         loop: true,
         margin: 10,
         nav: true,
-        dots:true,
-        items:1,
+        dots: true,
+        items: 1,
         navText: false
     });
 
@@ -55,8 +121,8 @@ $(document).ready(function () {
         loop: true,
         margin: 0,
         nav: true,
-        dots:false,
-        items:4,
+        dots: false,
+        items: 4,
         navText: false,
         responsive: {
             767: {
@@ -90,7 +156,9 @@ $(document).ready(function () {
         }
     });
 
-    $( function() {
-        $( "#tabs" ).tabs();
-    } );
+    $(function () {
+        $("#tabs").tabs();
+    });
+
+
 });

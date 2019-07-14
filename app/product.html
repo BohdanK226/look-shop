@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="css/css-reset.css"/>
     <link rel="stylesheet" href="css/fonts.css"/>
     <link rel="stylesheet" href="css/jquery-ui.min.css"/>
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.theme.min.css">
+    <link rel="stylesheet" href="css/fotorama.css">
     <link rel="stylesheet" href="css/style.css"/>
     <title>Look Shoop</title>
     <script src="js/jquery-3.4.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/fotorama.js"></script>
     <script src="js/script.js"></script>
 </head>
 <body>
@@ -444,6 +444,75 @@
         </ul>
     </div>
 </div>
+<main class="container">
+    <div class="wrapper">
+        <div class="gallery-container">
+            <div class="fotorama" data-height="500" data-fit="cover" data-nav="thumbs" data-thumbwidth="90"
+                 data-thumbheight="110" data-thumbmargin="12">
+                <img src="img/gallery-1.jpg" alt="product photo">
+                <img src="img/pr-6.jpg" alt="product photo">
+                <img src="img/pr-7.jpg" alt="product photo">
+                <img src="img/pr-1.jpg" alt="product photo">
+            </div>
+        </div>
+        <div class="product-info">
+            <a href="#" class="back-link"><i class="fas fa-chevron-left"></i>Back to <span>Women's Clothing</span></a>
+            <h2 class="caption">Sofi Blouse</h2>
+            <div class="price-review"><h3 class="price">$98,95</h3> <span><a href="#">12 reviews</a><i
+                    class="score"></i></span></div>
+            <p class="about-product">This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit auctor
+                aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
+                nibh
+                id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam
+                nec
+                tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit.
+                Class
+                aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat
+                justo.
+                Nullam ac urna eu felis dapibus condimentum sit amet a augue. Sed non neque elit. Sed ut imperdiet nisi.
+                Proin condimentum fermentum nunc. Etiam pharetra, erat sed fermentum feugiat, velit mauris egestas quam,
+                ut
+                aliquam massa nisl quis neque. Suspendisse in orci enim.</p>
+            <form class="product-parameters" action="#" name="product-parameters" method="get">
+                <div class="size-color">
+                    <select name="size" id="size" required>
+                        <option disabled selected>Select size</option>
+                        <option>XS</option>
+                        <option>S</option>
+                        <option>M</option>
+                        <option>L</option>
+                        <option>XL</option>
+                    </select>
+                    <div class="color">
+                        <label class="active" for="lightgray"></label>
+                        <label for="gray"></label>
+                        <label for="brown"></label>
+                        <label for="darkgray"></label>
+                        <label for="blue"></label>
+                        <input id="lightgray" type="radio" name="color" value="lightgray" required>
+                        <input id="gray" type="radio" name="color" value="gray">
+                        <input id="brown" type="radio" name="color" value="brown">
+                        <input id="darkgray" type="radio" name="color" value="darkgray">
+                        <input id="blue" type="radio" name="color" value="blue">
+                    </div>
+                </div>
+                <div class="counter">
+                    <div type="button" class="count-btn counterBut dec">-</div>
+                    <input type="text" name="count" class="field fieldCount" readonly value="1" data-min="1"
+                           data-max="20">
+                    <div type="button" class="count-btn counterBut inc">+</div>
+                </div>
+                <button type="submit" class="btn-orange">Add to cart <span>+</span></button>
+            </form>
+        </div>
+    </div>
+    <ul class="social-icons">
+        <li><a href="#"><i class="fab fa-facebook-f"></i>Share <br>on facebook</a></li>
+        <li><a href="#"><i class="fab fa-pinterest-p"></i>Pin <br>This product</a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i>Tweet <br>This product</a></li>
+        <li><a href="#"><i class="fas fa-envelope"></i>Email <br>A friend</a></li>
+    </ul>
+</main>
 <footer>
     <div class="cards">
         <div class="container">
