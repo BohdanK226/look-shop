@@ -31,12 +31,14 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
 gulp.task('scripts', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         'app/js/jquery-3.4.0.min.js', // Берем jQuery
+        'app/js/jquery-ui.min.js',
         'app/js/owl.carousel.min.js',
+        'app/js/fotorama.js',
 		 'app/js/script.js'
         ])
         .pipe(concat('all.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл
-        .pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
+        .pipe(gulp.dest('dist/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('code', function() {
@@ -47,12 +49,18 @@ gulp.task('code', function() {
 gulp.task('css-libs', function() {
     return gulp.src([
 	'app/css/css-reset.css',
+	'app/css/fonts.css',
+	'app/fonts/fontawesome/css/all.css',
+	'app/css/jquery-ui.min.css',
+	'app/css/owl.carousel.min.css',
+	'app/css/jquery-ui.theme.min.css',
+	'app/css/fotorama.css',
 	'app/css/style.css'
 	]) // Выбираем файл для минификации
 		.pipe(concat('all.css'))
         .pipe(cssnano()) // Сжимаем
         .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-        .pipe(gulp.dest('app/css')); // Выгружаем в папку app/css
+        .pipe(gulp.dest('dist/css')); // Выгружаем в папку app/css
 });
 
 gulp.task('clean', async function() {
@@ -73,16 +81,17 @@ gulp.task('img', function() {
 
 gulp.task('prebuild', async function() {
 
-    var buildCss = gulp.src([ // Переносим библиотеки в продакшен
-        'app/css/all.min.css'
-        ])
-    .pipe(gulp.dest('dist/css'))
+    // var buildCss = gulp.src([ // Переносим библиотеки в продакшен
+    //     'app/css/all.min.css'
+    //     ])
+    // .pipe(gulp.dest('dist/css'));
 
     var buildFonts = gulp.src('app/fonts/**/*') // Переносим шрифты в продакшен
-    .pipe(gulp.dest('dist/fonts'))
-
-    var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
-    .pipe(gulp.dest('dist/js'))
+    .pipe(gulp.dest('dist/fonts'));
+    var buildFontAwesome = gulp.src('app/fonts/fontawesome/webfonts/**/*') // Переносим шрифты в продакшен
+        .pipe(gulp.dest('dist/webfonts'));
+    // var buildJs = gulp.src('app/js/**/*') // Переносим скрипты в продакшен
+    // .pipe(gulp.dest('dist/js'));
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
     .pipe(gulp.dest('dist'));
@@ -91,7 +100,7 @@ gulp.task('prebuild', async function() {
 
 gulp.task('clear', function (callback) {
     return cache.clearAll();
-})
+});
 
 gulp.task('watch', function() {
     gulp.watch('app/scss/**/*.+(scss|sass)', gulp.parallel('sass')); // Наблюдение за sass файлами

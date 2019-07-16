@@ -598,7 +598,6 @@ body {
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {
     font-family: "Font Awesome 5 Pro";
-
   }
 
   .owl-carousel .owl-nav button {
@@ -929,7 +928,7 @@ body {
 
   .ui-tabs .ui-tabs-nav .ui-tabs-anchor {
     display: block;
-    font-family: Arial, sans-serif;
+    font-family: $main-font;
     font-size: 1.5em;
     text-transform: uppercase;
     letter-spacing: -0.15px;
@@ -937,6 +936,29 @@ body {
     cursor: pointer;
     color: #555555;
     padding: 1em 2em;
+  }
+
+  .ui-widget-header {
+    border: none;
+    background: none;
+    color: inherit;
+  }
+
+  .ui-widget-content a {
+    color: white;
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    font-family: $main-font!important;
+  }
+
+  .ui-widget.ui-widget-content {
+    border: none;
+    font-family: $main-font;
   }
 
   .ui-tabs .ui-tabs-nav {
