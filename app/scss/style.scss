@@ -85,7 +85,53 @@ body {
         padding: 25px 10px;
       }
 
+      .lang-select {
 
+        .sub-menu-container {
+          display: block;
+          position: relative;
+        }
+
+        .active,
+        .drop-down li {
+          font-size: 1.1em;
+          text-transform: uppercase;
+          padding: 5px 20px;
+          cursor: pointer;
+        }
+
+        .drop-down {
+          background-color: black;
+          position: absolute;
+          z-index: 3;
+          padding: 5px;
+          display: none;
+        }
+
+        .visible {
+          display: block;
+        }
+
+        .drop-down li {
+          border-top: 1px solid transparent;
+          border-bottom: 1px solid transparent;
+          &:hover {
+            border-top: 1px solid $orange;
+            border-bottom: 1px solid $orange;
+          }
+        }
+
+        .active {
+          border-left: 1px solid #444444;
+          border-right: 1px solid #444444;
+          display: flex;
+          &:after {
+            content: "\f0d7";
+            font-family: "Font Awesome 5 Pro";
+            margin-left: 5px;
+          }
+        }
+      }
 
       .user-account {
         font-size: 1.2em;
@@ -1015,39 +1061,39 @@ body {
       }
     }
   }
+}
 
-  .discount-products {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+.discount-products {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
 
-    @include max-screen(767px) {
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+  @include max-screen(767px) {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .product-item {
+    display: none;
+    margin: 0 0 30px 0;
+
+    .description {
+      background-color: #f7f7f7;
     }
 
-    .product-item {
-      display: none;
-      margin: 0 0 30px 0;
+    &:nth-child(-n+2) {
+      display: block;
+    }
 
-      .description {
-        background-color: #f7f7f7;
-      }
-
-      &:nth-child(-n+2) {
+    @include min-screen(767px) {
+      &:nth-child(-n+3) {
         display: block;
       }
-
-      @include min-screen(767px) {
-        &:nth-child(-n+3) {
-          display: block;
-        }
-      }
-      @include min-screen(980px) {
-        &:nth-child(-n+4) {
-          display: block;
-        }
+    }
+    @include min-screen(980px) {
+      &:nth-child(-n+4) {
+        display: block;
       }
     }
   }
@@ -1535,6 +1581,71 @@ main {
         display: flex;
         align-items: center;
         line-height: 14px;
+      }
+    }
+  }
+  h2.decor-lines {
+    color: #414141;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+  }
+
+  .about-product {
+    margin-bottom: 40px;
+    .accordion-container {
+      li:nth-child(1) .article-caption {background-color: #ffd5c6};
+      li:nth-child(2) .article-caption {background-color: #ffcab8};
+      li:nth-child(3) .article-caption {background-color: #ffae92};
+      li:nth-child(4) .article-caption {background-color: #ffa687};
+      li:nth-child(5) .article-caption  {background-color: #fd926d};
+      .article-caption {
+        padding: 25px 18px;
+        cursor: pointer;
+        font-size: 1.4em;
+        text-transform: uppercase;
+        color: #ffffff;
+        &:before {
+          content: "\f054";
+          font-family: "Font Awesome 5 Pro";
+          margin-left: 5px;
+          font-size: 12px;
+          display: inline-block;
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+          line-height: 24px;
+          border: 1px solid #ffffff;
+          background-color: #f2b9a4;
+          text-align: center;
+          vertical-align: middle;
+        }
+      }
+
+      p {
+        font-size: 1.4em;
+        color: #8f8f8f;
+        line-height: 1.5em;
+        text-align: justify;
+        padding: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transform: scale(0);
+        transition: all 1s ease-in-out;
+
+      }
+      p.active {
+        visibility: visible;
+        max-height: 3000px;
+        opacity: 1;
+        padding: 15px 10px 10px 25px;
+        transform: scale(1);
       }
     }
   }

@@ -93,16 +93,31 @@ $(document).ready(function () {
         }
     });
 
+    $('.about-product .article-caption').click(function () {
+        $(this).next(".accordion-content").toggleClass('active');
+    });
+
+    $('.lang-select .drop-down li').click(function () {
+        $('.lang-select .active').empty();
+        $(this).clone().appendTo('.lang-select .active');
+        $('.lang-select .drop-down').removeClass('visible');
+    });
+
+    $('.lang-select .active').click(function () {
+        $('.lang-select .drop-down').toggleClass('visible');
+    });
+
+
     $(".mobile-menu i").click(function () {
         $(".main-menu").toggleClass("active");
     });
+
     $(window).resize(function () {
         if (mql.matches) {
             menu_btn.each(function (index, el) {
                 if ($(this).hasClass('active')) {
                     $(this).next('ul').addClass('active');
                 }
-                ;
             });
         }
     });
